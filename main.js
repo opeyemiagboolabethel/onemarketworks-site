@@ -110,6 +110,7 @@ if (how && line) addEventListener("scroll", () => {
 
 // 3D carousel
 const ring = $(".ring"), sites = $$(".site");
+sites.forEach(s => { const im = s.querySelector("img"); if (!im) return; const f = () => s.classList.add("noimg"); im.addEventListener("error", f); if (im.complete && !im.naturalWidth) f(); });
 if (ring) {
   const n = sites.length, step = 360 / n; let idx = 0, timer;
   const radius = () => Math.round((ring.offsetWidth / 2) / Math.tan(Math.PI / n)) + 40;
@@ -121,9 +122,10 @@ if (ring) {
   $(".prev").addEventListener("click", () => { prev(); restart(); });
   const car = $(".carousel");
   car.addEventListener("keydown", e => { if (e.key === "ArrowRight") next(); if (e.key === "ArrowLeft") prev(); });
-  let sx = null;
+  let sx = null, dragged = false;
+  sites.forEach(s => s.addEventListener("click", e => { if (dragged) { e.preventDefault(); dragged = false; } }));
   car.addEventListener("pointerdown", e => { sx = e.clientX; });
-  addEventListener("pointerup", e => { if (sx === null) return; const d = e.clientX - sx; if (Math.abs(d) > 40) { d < 0 ? next() : prev(); restart(); } sx = null; });
+  addEventListener("pointerup", e => { if (sx === null) return; const d = e.clientX - sx; dragged = Math.abs(d) > 8; if (Math.abs(d) > 40) { d < 0 ? next() : prev(); restart(); } sx = null; });
   const restart = () => { clearInterval(timer); if (!reduce) timer = setInterval(next, 3500); };
   restart();
 }
