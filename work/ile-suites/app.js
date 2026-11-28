@@ -1,4 +1,4 @@
-const OMW_WA = "2347070084679";
+const OMW_WA = "2349115640949";
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
 addEventListener("scroll", () => $(".nav").classList.toggle("solid", scrollY > 40), { passive: true });

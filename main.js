@@ -1,5 +1,5 @@
 // ===== Settings: put the business WhatsApp number here (international format, digits only), e.g. "2348012345678"
-const WHATSAPP = "2347070084679";
+const WHATSAPP = "2349115640949";
 const EMAIL = "onemarketworks@gmail.com";
 
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];

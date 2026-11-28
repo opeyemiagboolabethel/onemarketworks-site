@@ -1,4 +1,4 @@
-const OMW_WA = "2347070084679";
+const OMW_WA = "2349115640949";
 const SITE = document.title.split("·")[0].trim();
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const fmt = n => "₦" + (Math.round(n / 500) * 500).toLocaleString("en-NG");
