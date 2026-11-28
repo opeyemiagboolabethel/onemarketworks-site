@@ -252,8 +252,6 @@ details p{color:var(--muted);margin-top:.8rem;max-width:680px}
 .brandart .bm{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font:700 1.7rem/1 Georgia,serif;letter-spacing:.05em}
 .brandart .bt{font:600 2rem/1 Georgia,serif}.brandart .bt i{font-weight:400}
 .brandart .bs{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
-.tripleo{background:radial-gradient(circle at 70% 15%,#ffb347 0,transparent 45%),linear-gradient(160deg,#e2531d,#8f1d0e);color:#fff4e3}
-.tripleo .bm{background:#fff4e3;color:#c2410c;box-shadow:0 0 0 8px rgba(255,244,227,.18)}
 .sambecca{background:radial-gradient(circle at 25% 20%,rgba(212,175,106,.35),transparent 50%),linear-gradient(160deg,#1b1b1f,#050506);color:#f1e6d2}
 .sambecca .bm{border:1.5px solid #d4af6a;color:#d4af6a;font-size:2.6rem;font-style:italic}
 .brandart::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:1px solid currentColor;opacity:.12;top:-80px;right:-90px}
